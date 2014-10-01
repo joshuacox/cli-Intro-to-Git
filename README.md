@@ -13,6 +13,7 @@ pwd     <-- Print Working Directory (the "you are here" of unix land)
 mkdir    <--make director/folder
 cd   <-- change directory (this is how you 'move' around the file system
 ls   <-- list the current directory i.e. show me what is in the current folder
+man  <-- “manual” gives the manual page for any command i.e. `man ls` will give the manual page for ls
 ```
 ```
 # This is a comment, lines that start with a hash are comments and
