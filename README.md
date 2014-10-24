@@ -73,7 +73,7 @@ Checking connectivity... done.
 
 
 ```
-# yay!  we're done, now send me the changes, and when I send them back I'll have more CLI (command line interpreter) fun for you!
+Appendix A more comment styles:
 
 // some languages a double slash is the single comment
 
