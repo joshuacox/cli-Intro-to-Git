@@ -29,11 +29,11 @@ git log
  Ok so that was git in 60 seconds.  What the hell just went on?  Let me be abit more verbose with an intro of some very basic commands with a basic example right after (the dollar sign represent your prompt, and everything after it on that line is the command typed it [i.e. don't copy the dollar sign if you're copying and pasting]):
 */
 ```
-pwd     <-- Print Working Directory (the "you are here" of unix land)
-mkdir    <--make director/folder
-cd   <-- change directory (this is how you 'move' around the file system
-ls   <-- list the current directory i.e. show me what is in the current folder
-man  <-- “manual” gives the manual page for any command i.e. `man ls` will give the manual page for ls
+pwd      <-- Print Working Directory (the "you are here" of unix land)
+mkdir    <-- make directory/folder
+cd       <-- change directory (this is how you 'move' around the file system
+ls       <-- list the current directory i.e. show me what is in the current folder
+man      <-- “manual” gives the manual page for any command i.e. `man ls` will give the manual page for ls
 ```
 ```
 # This is a comment, lines that start with a hash are comments and
