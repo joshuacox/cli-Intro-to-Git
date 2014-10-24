@@ -5,7 +5,7 @@ Introduction to git on the command line in 60 seconds or less
 
 
 /* 
-So sixty second crash course in the command line, type these commands directly into bash (your terminal, shell, command line interpreter, whatever you want to call it [tested in bash, sh, and zsh *ymmv])
+Type these commands directly into bash (your terminal, shell, command line interpreter, whatever you want to call it [tested in bash, sh, and zsh *ymmv])
 */  
 ```
 cd /tmp
