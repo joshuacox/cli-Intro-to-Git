@@ -1,7 +1,7 @@
-Cli-Intro-to-Git
+# Cli-Intro-to-Git
 ==========
 
-Introduction to git on the command line in 60 seconds or less
+### Introduction to git on the command line in 60 seconds or less
 
 
 /* 
@@ -25,8 +25,9 @@ git status
 git commit -am 'second test'
 git log
 ```
-
-Ok so that was git in 60 seconds.  What the hell just went on?  Let me be abit more verbose with an intro of some very basic commands with a basic example right after (the dollar sign represent your prompt, and everything after it on that line is the command typed it [i.e. don't copy the dollar sign if you're copying and pasting]):
+/*
+ Ok so that was git in 60 seconds.  What the hell just went on?  Let me be abit more verbose with an intro of some very basic commands with a basic example right after (the dollar sign represent your prompt, and everything after it on that line is the command typed it [i.e. don't copy the dollar sign if you're copying and pasting]):
+*/
 ```
 pwd     <-- Print Working Directory (the "you are here" of unix land)
 mkdir    <--make director/folder
