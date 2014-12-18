@@ -49,6 +49,28 @@ man git  <-- At some point you'll feel confident enough to just pull this page u
 # and you should type what directly follows that $ into your command prompt
 # like learning a new language it's best for you to actually speak (type) the words
 # and see the resulting output, it's very satisfying to see your creation take life
+# let's see those first commands again with some # comments to explain what's going on
+
+pwd
+cd /tmp
+pwd
+mkdir git
+cd git
+pwd
+git init
+echo 'my test' >test1
+ls
+git status
+git add test1
+git status
+git commit -am 'initial add of test1'
+git log
+echo 'second test' >>test1
+git status
+echo 'second test file'>test2
+git status
+git commit -am 'second test'
+git log
 ```
 ```
 $ pwd
