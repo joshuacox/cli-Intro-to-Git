@@ -41,6 +41,9 @@ man      <-- “manual” gives the manual page for any command i.e. `man ls` wi
 # comments are  very important in programming languages
 
 # ok from here $ means the prompt
+# and you should type what directly follows that $ into your command prompt
+# like learning a new language it's best for you to actually speak (type) the words
+# and see the resulting output, it's very satisfying to see your creation take life
 ```
 ```
 $ pwd
