@@ -8,11 +8,15 @@
 Type these commands directly into bash (your terminal, shell, command line interpreter, whatever you want to call it [tested in bash, sh, and zsh *ymmv])
 */  
 ```
+pwd
 cd /tmp
+pwd
 mkdir git
 cd git
+pwd
 git init
 echo 'my test' >test1
+ls
 git status
 git add test1
 git status
@@ -34,6 +38,7 @@ mkdir    <-- make directory/folder
 cd       <-- change directory (this is how you 'move' around the file system
 ls       <-- list the current directory i.e. show me what is in the current folder
 man      <-- “manual” gives the manual page for any command i.e. `man ls` will give the manual page for ls
+man git  <-- At some point you'll feel confident enough to just pull this page up for reference, not just yet
 ```
 ```
 # This is a comment, lines that start with a hash are comments and
