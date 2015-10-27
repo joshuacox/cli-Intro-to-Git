@@ -30,16 +30,33 @@ git commit -am 'second test'
 git log
 ```
 /*
- Ok so that was git in 60 seconds.  What just went on?  Let me be abit more verbose with an intro of some very basic commands with a basic explanation after the `<--` :
+ Ok so that was git in 60 seconds.  What just went on?  Let me be abit more verbose with an intro of some very basic commands with a basic explanation after:
 */
 ```
-pwd      <-- Print Working Directory (the "you are here" of unix land)
-mkdir    <-- make directory/folder
-cd       <-- change directory (this is how you 'move' around the file system
-ls       <-- list the current directory i.e. show me what is in the current folder
-man      <-- “manual” gives the manual page for any command i.e. `man ls` will give the manual page for ls
-man git  <-- At some point you'll feel confident enough to just pull this page up for reference, not just yet
+pwd
 ```
+^ Print Working Directory (the "you are here" of unix land)
+```
+mkdir
+```
+^ make directory/folder
+```
+cd
+```
+^ change directory (this is how you 'move' around the file system
+```
+ls
+```
+^ list the current directory i.e. show me what is in the current folder
+```
+man
+```
+^ “manual” gives the manual page for any command i.e. `man ls` will give the manual page for ls
+```
+man git
+```
+^ At some point you'll feel confident enough to just pull this page up for reference, not just yet
+
 ```
 # This is a comment, lines that start with a hash are comments and
 # and are ways for me to explain what is going on for your benefit only 
