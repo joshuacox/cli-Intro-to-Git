@@ -229,14 +229,25 @@ but let's prove to ourselves that we changed directories with <code>pwd</code></
 <pre><code>pwd
 </code></pre>
 
-<p>ok now let's clone that repo!</p>
+<h1>
+<a id="creating-your-own-repo" class="anchor" href="#creating-your-own-repo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating your own repo</h1>
 
-<pre><code>git clone https://github.com/WebHostingCoopTeam/WebHostingCoopTeam.github.io.git
+<p>Let’s get you your own repo and make a static page</p>
+
+<p>If you don’t have a github account get one it’s free</p>
+
+<p>now make a new repo</p>
+
+<p>ok now let's clone that repo! There is a link in the bottom righthand corner copy it then <code>git clone</code> that link</p>
+
+<p>here’s an example of what it might look like:</p>
+
+<pre><code>git clone https://github.com/YOURGITHUBID/YOURREPO.git
 </code></pre>
 
 <p>the output should look something like this:</p>
 
-<pre><code>Cloning into 'WebHostingCoopTeam.github.io'...
+<pre><code>Cloning into 'YOURREPO'...
 remote: Counting objects: 331, done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 331 (delta 0), reused 0 (delta 0)
@@ -244,6 +255,25 @@ Receiving objects: 100% (331/331), 3.65 MiB | 483.00 KiB/s, done.
 Resolving deltas: 100% (43/43), done.
 Checking connectivity... done.
 </code></pre>
+
+<p>now <code>cd</code> into that repo</p>
+
+<pre><code>cd YOURREPO
+</code></pre>
+
+<p>make a new readme and add it to git as a tracked file, commit, then push it back up to github</p>
+
+<pre><code>echo ‘# Howdy folks!’&gt;README.md
+git add README.md
+git commit -am “added new README.md”
+git push origin master
+</code></pre>
+
+<p>now click on the ‘settings’ page for your repo, in there is large button labeled “Launch Automatic Page Generator”, on the resulting page click “Load README.md”, then click “Continue to Layouts” in the bottom right hand corner, choose a layout and save your static site, your new site is now available at an address like this one: </p>
+
+<p><a href="http://YOURGITHUBID.github.io/YOURREPO">http://YOURGITHUBID.github.io/YOURREPO</a></p>
+
+<p>Congratulations you now have a static site</p>
       </section>
     </div>
 
