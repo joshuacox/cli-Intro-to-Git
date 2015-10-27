@@ -98,119 +98,125 @@ let's see those first commands again with some comments to explain what's going 
 <pre><code>pwd
 </code></pre>
 
-<p>pwd should print the path to your home directory at the moment
+<p>^ pwd should print the path to your home directory at the moment
 by default this is where you usually start when opening a shell</p>
 
 <pre><code>cd /tmp
 </code></pre>
 
-<p>change directory to /tmp
-/tmp is a great place for temporary stuff, careful this place is erased upon reboot</p>
+<p>^ change directory to /tmp</p>
+
+<p>(/tmp is a great place for temporary stuff, careful this place is erased upon reboot)</p>
 
 <pre><code>pwd
 </code></pre>
 
-<p>prove to me that we changed directories (i.e. it should now print /tmp)</p>
+<p>^ prove to me that we changed directories (i.e. it should now print /tmp)</p>
 
 <pre><code>mkdir git
 </code></pre>
 
-<p>make a new directory named ‘git’</p>
+<p>^ make a new directory named ‘git’</p>
 
 <pre><code>cd git
 </code></pre>
 
-<p>change into the git directory</p>
+<p>^ change into the git directory</p>
 
 <pre><code>pwd
 </code></pre>
 
-<p>now displays /tmp/git</p>
+<p>^ now displays /tmp/git</p>
 
 <pre><code>git init
 </code></pre>
 
-<p>initialize /tmp/git into a git repo</p>
+<p>^ initialize /tmp/git into a git repo</p>
 
 <pre><code>echo 'my test' &gt;test1
 </code></pre>
 
-<p>overwrite or make a new file called test1 and makes its contents read ‘my test’</p>
+<p>^ overwrite or make a new file called test1 and makes its contents read ‘my test’</p>
 
 <pre><code>ls
 </code></pre>
 
-<p>show me this new file</p>
+<p>^ show me this new file</p>
 
 <pre><code>cat test1
 </code></pre>
 
-<p>dumps the contents of the file which should be ‘my test’</p>
+<p>^ dumps the contents of the file which should be ‘my test’</p>
 
 <pre><code>git status
 </code></pre>
 
-<p>have git tell us of any changes in the current directory</p>
+<p>^ have git tell us of any changes in the current directory</p>
 
 <pre><code>git add test1
 </code></pre>
 
-<p>add our new file to gits tracking system</p>
+<p>^ add our new file to gits tracking system</p>
 
 <pre><code>git status
 </code></pre>
 
-<p>show us that the new file has now been added</p>
+<p>^ show us that the new file has now been added</p>
 
 <pre><code>git commit -am 'initial add of test1'
 </code></pre>
 
-<p>make a commit and give it a nice message explaining what is going on</p>
+<p>^ make a commit and give it a nice message explaining what is going on</p>
 
 <pre><code>git log
 </code></pre>
 
-<p>show us a log of the history of this git repo</p>
+<p>^ show us a log of the history of this git repo</p>
 
 <pre><code>echo 'second test' &gt;&gt;test1
 </code></pre>
 
-<p>make a second line in our first test file</p>
+<p>^ make a second line in our first test file</p>
 
 <pre><code>git status
 </code></pre>
+
+<p>^ show us which files have changed</p>
 
 <pre><code>echo 'second test file'&gt;test2
 </code></pre>
 
-<p>make a second test file</p>
+<p>^ make a second test file</p>
 
 <pre><code>git status
 </code></pre>
 
-<p>show us which files have changed</p>
+<p>^ again show us which files have changed</p>
 
 <pre><code>git diff
 </code></pre>
 
-<p>show us the changes</p>
+<p>^ show us the changes</p>
 
 <pre><code>git commit -am 'second test'
 </code></pre>
 
-<p>commit those changes</p>
+<p>^ commit those changes</p>
 
 <pre><code>git log
 </code></pre>
 
-<p>show us a log of the history of this git repo</p>
+<p>^ show us a log of the history of this git repo</p>
+
+<h1>
+<a id="permanent-home-for-git" class="anchor" href="#permanent-home-for-git" aria-hidden="true"><span class="octicon octicon-link"></span></a>Permanent home for git</h1>
 
 <p>Okay from here let’s make a git directory in our home and start cloneing repos from a git repo</p>
 
 <pre><code>cd
 </code></pre>
 
-<p>given no arguments cd will take you home</p>
+<p>^ given no arguments cd will take you home</p>
 
 <pre><code>pwd
 </code></pre>
@@ -218,12 +224,12 @@ by default this is where you usually start when opening a shell</p>
 <pre><code>mkdir git
 </code></pre>
 
-<p>there is no output for this command</p>
+<p>^ there is no output for this command</p>
 
 <pre><code>cd git
 </code></pre>
 
-<p>again no output on this command so long as there are no errors
+<p>^ again no output on this command so long as there are no errors
 but let's prove to ourselves that we changed directories with <code>pwd</code></p>
 
 <pre><code>pwd
@@ -236,7 +242,10 @@ but let's prove to ourselves that we changed directories with <code>pwd</code></
 
 <p>If you don’t have a github account get one it’s free</p>
 
-<p>now make a new repo</p>
+<p>now make a new repo, first let’s make sure we are in our git directory in the home folder</p>
+
+<pre><code>cd ~/git
+</code></pre>
 
 <p>ok now let's clone that repo! There is a link in the bottom righthand corner copy it then <code>git clone</code> that link</p>
 
@@ -264,10 +273,24 @@ Checking connectivity... done.
 <p>make a new readme and add it to git as a tracked file, commit, then push it back up to github</p>
 
 <pre><code>echo ‘# Howdy folks!’&gt;README.md
-git add README.md
-git commit -am “added new README.md”
-git push origin master
 </code></pre>
+
+<p>^ echo is an easy way to add a line to a file, or in this case overwrite the file (which is the difference between &gt; and &gt;&gt;, but I’ll save the rest of that lecture for a tutorial on STDIN STDOUT and STDERR redirection and piping)</p>
+
+<pre><code>git add README.md
+</code></pre>
+
+<p>^ add the README file to git</p>
+
+<pre><code>git commit -am “added new README.md”
+</code></pre>
+
+<p>^ make a new commit in git</p>
+
+<pre><code>git push origin master
+</code></pre>
+
+<p>^ push it all back up to github (or whatever your origin is set to)</p>
 
 <p>now click on the ‘settings’ page for your repo, in there is large button labeled “Launch Automatic Page Generator”, on the resulting page click “Load README.md”, then click “Continue to Layouts” in the bottom right hand corner, choose a layout and save your static site, your new site is now available at an address like this one: </p>
 
