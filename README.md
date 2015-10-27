@@ -172,14 +172,23 @@ but let's prove to ourselves that we changed directories with `pwd`
 pwd
 ```
 
+# Creating your own repo 
 
-ok now let's clone that repo!
+Let’s get you your own repo and make a static page
+
+If you don’t have a github account get one it’s free
+
+now make a new repo
+
+ok now let's clone that repo! There is a link in the bottom righthand corner copy it then `git clone` that link
+
+here’s an example of what it might look like:
 ```
-git clone https://github.com/WebHostingCoopTeam/WebHostingCoopTeam.github.io.git
+git clone https://github.com/YOURGITHUBID/YOURREPO.git
 ```
 the output should look something like this:
 ```
-Cloning into 'WebHostingCoopTeam.github.io'...
+Cloning into 'YOURREPO'...
 remote: Counting objects: 331, done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 331 (delta 0), reused 0 (delta 0)
@@ -187,3 +196,22 @@ Receiving objects: 100% (331/331), 3.65 MiB | 483.00 KiB/s, done.
 Resolving deltas: 100% (43/43), done.
 Checking connectivity... done.
 ```
+
+now `cd` into that repo
+
+```
+cd YOURREPO
+```
+make a new readme and add it to git as a tracked file, commit, then push it back up to github
+```
+echo ‘# Howdy folks!’>README.md
+git add README.md
+git commit -am “added new README.md”
+git push origin master
+```
+
+now click on the ‘settings’ page for your repo, in there is large button labeled “Launch Automatic Page Generator”, on the resulting page click “Load README.md”, then click “Continue to Layouts” in the bottom right hand corner, choose a layout and save your static site, your new site is now available at an address like this one: 
+
+http://YOURGITHUBID.github.io/YOURREPO
+
+Congratulations you now have a static site
