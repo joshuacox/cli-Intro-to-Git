@@ -63,110 +63,114 @@ let's see those first commands again with some comments to explain what's going 
 ```
 pwd
 ```
-pwd should print the path to your home directory at the moment
+^ pwd should print the path to your home directory at the moment
 by default this is where you usually start when opening a shell
 ```
 cd /tmp
 ```
-change directory to /tmp
-/tmp is a great place for temporary stuff, careful this place is erased upon reboot
+^ change directory to /tmp
+
+(/tmp is a great place for temporary stuff, careful this place is erased upon reboot)
+
 ```
 pwd
 ```
-prove to me that we changed directories (i.e. it should now print /tmp)
+^ prove to me that we changed directories (i.e. it should now print /tmp)
 ```
 mkdir git
 ```
-make a new directory named ‘git’
+^ make a new directory named ‘git’
 ```
 cd git
 ```
-change into the git directory
+^ change into the git directory
 ```
 pwd
 ```
-now displays /tmp/git
+^ now displays /tmp/git
 ```
 git init
 ```
-initialize /tmp/git into a git repo
+^ initialize /tmp/git into a git repo
 ```
 echo 'my test' >test1
 ```
-overwrite or make a new file called test1 and makes its contents read ‘my test’
+^ overwrite or make a new file called test1 and makes its contents read ‘my test’
 ```
 ls
 ```
-show me this new file
+^ show me this new file
 ```
 cat test1
 ```
-dumps the contents of the file which should be ‘my test’
+^ dumps the contents of the file which should be ‘my test’
 ```
 git status
 ```
-have git tell us of any changes in the current directory
+^ have git tell us of any changes in the current directory
 ```
 git add test1
 ```
-add our new file to gits tracking system
+^ add our new file to gits tracking system
 ```
 git status
 ```
-show us that the new file has now been added
+^ show us that the new file has now been added
 ```
 git commit -am 'initial add of test1'
 ```
-make a commit and give it a nice message explaining what is going on
+^ make a commit and give it a nice message explaining what is going on
 ```
 git log
 ```
-show us a log of the history of this git repo
+^ show us a log of the history of this git repo
 ```
 echo 'second test' >>test1
 ```
-make a second line in our first test file
+^ make a second line in our first test file
 ```
 git status
 ```
+^ show us which files have changed
 ```
 echo 'second test file'>test2
 ```
-make a second test file
+^ make a second test file
 ```
 git status
 ```
-show us which files have changed
+^ again show us which files have changed
 ```
 git diff
 ```
-show us the changes
+^ show us the changes
 ```
 git commit -am 'second test'
 ```
-commit those changes
+^ commit those changes
 ```
 git log
 ```
-show us a log of the history of this git repo
+^ show us a log of the history of this git repo
 
+# Permanent home for git
 
 Okay from here let’s make a git directory in our home and start cloneing repos from a git repo
 ```
 cd
 ```
-given no arguments cd will take you home
+^ given no arguments cd will take you home
 ```
 pwd
 ```
 ```
 mkdir git
 ```
-there is no output for this command
+^ there is no output for this command
 ```
 cd git
 ```
-again no output on this command so long as there are no errors
+^ again no output on this command so long as there are no errors
 but let's prove to ourselves that we changed directories with `pwd`
 ```
 pwd
@@ -178,7 +182,10 @@ Let’s get you your own repo and make a static page
 
 If you don’t have a github account get one it’s free
 
-now make a new repo
+now make a new repo, first let’s make sure we are in our git directory in the home folder
+```
+cd ~/git
+```
 
 ok now let's clone that repo! There is a link in the bottom righthand corner copy it then `git clone` that link
 
@@ -205,10 +212,20 @@ cd YOURREPO
 make a new readme and add it to git as a tracked file, commit, then push it back up to github
 ```
 echo ‘# Howdy folks!’>README.md
+```
+^ echo is an easy way to add a line to a file, or in this case overwrite the file (which is the difference between > and >>, but I’ll save the rest of that lecture for a tutorial on STDIN STDOUT and STDERR redirection and piping)
+```
 git add README.md
+```
+^ add the README file to git
+```
 git commit -am “added new README.md”
+```
+^ make a new commit in git
+```
 git push origin master
 ```
+^ push it all back up to github (or whatever your origin is set to)
 
 now click on the ‘settings’ page for your repo, in there is large button labeled “Launch Automatic Page Generator”, on the resulting page click “Load README.md”, then click “Continue to Layouts” in the bottom right hand corner, choose a layout and save your static site, your new site is now available at an address like this one: 
 
