@@ -1,12 +1,11 @@
-# Cli-Intro-to-Git
+Cli-Intro-to-Git
 ==========
 
 ### Introduction to git on the command line in 60 seconds or less
 
 
-/* 
-Type these commands directly into bash (your terminal, shell, command line interpreter, whatever you want to call it [tested in bash, sh, and zsh *ymmv])
-*/  
+Type these commands directly into bash your terminal, shell, command line interpreter, whatever you want to call it [tested in bash, sh, and zsh ymmv]
+
 ```
 pwd
 cd /tmp
@@ -29,9 +28,7 @@ git status
 git commit -am 'second test'
 git log
 ```
-/*
  Ok so that was git in 60 seconds.  What just went on?  Let me be abit more verbose with an intro of some very basic commands with a basic explanation after:
-*/
 ```
 pwd
 ```
@@ -57,86 +54,131 @@ man git
 ```
 ^ At some point you'll feel confident enough to just pull this page up for reference, not just yet
 
-```
-# This is a comment, lines that start with a hash are comments and
-# and are ways for me to explain what is going on for your benefit only 
-# comments are  very important in programming languages
 
-# ok from here $ means the prompt
-# and you should type what directly follows that $ into your command prompt
-# like learning a new language it's best for you to actually speak (type) the words
-# and see the resulting output, it's very satisfying to see your creation take life
-# let's see those first commands again with some # comments to explain what's going on
+you should type all these commands into your command prompt
+like learning a new language it's best for you to actually speak (type) the words
+and see the resulting output, it's very satisfying to see your creation take life
+let's see those first commands again with some comments to explain what's going on
 
-$ pwd
-# pwd should print the path to your home directory at the moment
-# by default this is where you usually start when opening a shell
-$ cd /tmp
-# change directory to /tmp
-# /tmp is a great place for temporary stuff, careful this place is erased upon reboot
-$ pwd
-# prove to me that we changed directories (i.e. it should now print /tmp)
-$ mkdir git
-# make a new directory named ‘git’
-$ cd git
-# change into the git directory
-$ pwd
-# now displays /tmp/git
-$ git init
-# initialize /tmp/git into a git repo
-$ echo 'my test' >test1
-# overwrite or make a new file called test1 and makes its contents read ‘my test’
-$ ls
-# show me this new file
-$ cat test1
-# dumps the contents of the file which should be ‘my test’
-$ git status
-# have git tell us of any changes in the current directory
-$ git add test1
-# add our new file to gits tracking system
-$ git status
-# show us that the new file has now been added
-$ git commit -am 'initial add of test1'
-# make a commit and give it a nice message explaining what is going on
-$ git log
-# show us a log of the history of this git repo
-$ echo 'second test' >>test1
-# make a second line in our first test file
-$ git status
-$ echo 'second test file'>test2
-# make a second test file
-$ git status
-# show us which files have changed
-$ git diff
-# show us the changes
-$ git commit -am 'second test'
-# commit those changes
-$ git log
-# show us a log of the history of this git repo
 ```
-# Okay from here let’s make a git directory in our home and start cloneing repos from a git repo
+pwd
+```
+pwd should print the path to your home directory at the moment
+by default this is where you usually start when opening a shell
+```
+cd /tmp
+```
+change directory to /tmp
+/tmp is a great place for temporary stuff, careful this place is erased upon reboot
+```
+pwd
+```
+prove to me that we changed directories (i.e. it should now print /tmp)
+```
+mkdir git
+```
+make a new directory named ‘git’
+```
+cd git
+```
+change into the git directory
+```
+pwd
+```
+now displays /tmp/git
+```
+git init
+```
+initialize /tmp/git into a git repo
+```
+echo 'my test' >test1
+```
+overwrite or make a new file called test1 and makes its contents read ‘my test’
+```
+ls
+```
+show me this new file
+```
+cat test1
+```
+dumps the contents of the file which should be ‘my test’
+```
+git status
+```
+have git tell us of any changes in the current directory
+```
+git add test1
+```
+add our new file to gits tracking system
+```
+git status
+```
+show us that the new file has now been added
+```
+git commit -am 'initial add of test1'
+```
+make a commit and give it a nice message explaining what is going on
+```
+git log
+```
+show us a log of the history of this git repo
+```
+echo 'second test' >>test1
+```
+make a second line in our first test file
+```
+git status
+```
+```
+echo 'second test file'>test2
+```
+make a second test file
+```
+git status
+```
+show us which files have changed
+```
+git diff
+```
+show us the changes
+```
+git commit -am 'second test'
+```
+commit those changes
+```
+git log
+```
+show us a log of the history of this git repo
+
+
+Okay from here let’s make a git directory in our home and start cloneing repos from a git repo
 ```
 cd
-# given no arguments cd will take you home
-$ pwd
-/home/bob
+```
+given no arguments cd will take you home
+```
+pwd
 ```
 ```
-$ mkdir git
-# there is no output for this command
+mkdir git
 ```
+there is no output for this command
 ```
-$ cd git
-# again no output on this command so long as there are no errors
-# but let's prove to ourselves that we changed directories with `pwd`
-$ pwd
-/home/bob/git
+cd git
+```
+again no output on this command so long as there are no errors
+but let's prove to ourselves that we changed directories with `pwd`
+```
+pwd
 ```
 
 
+ok now let's clone that repo!
 ```
-# ok now let's clone that repo!
-$ git clone https://github.com/WebHostingCoopTeam/WebHostingCoopTeam.github.io.git
+git clone https://github.com/WebHostingCoopTeam/WebHostingCoopTeam.github.io.git
+```
+the output should look something like this:
+```
 Cloning into 'WebHostingCoopTeam.github.io'...
 remote: Counting objects: 331, done.
 remote: Compressing objects: 100% (2/2), done.
@@ -144,17 +186,4 @@ remote: Total 331 (delta 0), reused 0 (delta 0)
 Receiving objects: 100% (331/331), 3.65 MiB | 483.00 KiB/s, done.
 Resolving deltas: 100% (43/43), done.
 Checking connectivity... done.
-```
-
-
-```
-Appendix A more comment styles:
-
-// some languages a double slash is the single comment
-
-/*
- this is how you do a multiline
- comment in some languages
- with the slash star - comments - star slash 
-*/
 ```
