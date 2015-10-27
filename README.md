@@ -28,7 +28,9 @@ git status
 git commit -am 'second test'
 git log
 ```
- Ok so that was git in 60 seconds.  What just went on?  Let me be abit more verbose with an intro of some very basic commands with a basic explanation after:
+
+### WTF?!?!
+ Ok so that was git in 60 seconds.  What just went on?  Let me be a bit more verbose with an intro of some very basic commands with a basic explanation after:
 ```
 pwd
 ```
@@ -54,12 +56,14 @@ man git
 ```
 ^ At some point you'll feel confident enough to just pull this page up for reference, not just yet
 
+### Learning what is going on
 
 you should type all these commands into your command prompt
 like learning a new language it's best for you to actually speak (type) the words
 and see the resulting output, it's very satisfying to see your creation take life
 let's see those first commands again with some comments to explain what's going on
 
+###  explanations
 ```
 pwd
 ```
@@ -155,7 +159,7 @@ git log
 
 # Permanent home for git
 
-Okay from here let’s make a git directory in our home and start cloneing repos from a git repo
+Okay from here let’s make a git directory in our home and start cloning repos from a git repo
 ```
 cd
 ```
@@ -213,7 +217,7 @@ make a new readme and add it to git as a tracked file, commit, then push it back
 ```
 echo ‘# Howdy folks!’>README.md
 ```
-^ echo is an easy way to add a line to a file, or in this case overwrite the file (which is the difference between > and >>, but I’ll save the rest of that lecture for a tutorial on STDIN STDOUT and STDERR redirection and piping)
+^ echo is an easy way to add a line to a file, or in this case overwrite the file (which is the difference between > and >>, but I’ll save the rest of that lecture for a tutorial on STDIN STDOUT and STDERR redirection and piping!)
 ```
 git add README.md
 ```
@@ -231,4 +235,4 @@ now click on the ‘settings’ page for your repo, in there is large button lab
 
 http://YOURGITHUBID.github.io/YOURREPO
 
-Congratulations you now have a static site
+Congratulations you now have a static site!
